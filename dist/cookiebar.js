@@ -1,6 +1,6 @@
 /**
  * cookiebar - It is a pure JS code, that warns the visitors in the notification bar, the page saves cookies. This is Compliant with the new EU cookie law.
- * Date 2020-02-04T15:52:45Z
+ * Date 2020-02-04T15:57:37Z
  * 
  * @author Tamás András Horváth <htomy92@gmail.com> (https://icetee.hu)
  * @version v1.0.0
@@ -123,6 +123,7 @@
         description: "The site uses cookies to operate. By using our services you agree to use the cookies!",
         link: "More information",
         href: "http://ec.europa.eu/ipg/basics/legal/cookies/index_en.htm",
+        target: "_self",
         button: "Accept",
         more: ""
       },
@@ -209,7 +210,7 @@
       '<div class="${cls}-content">' +
       '<div class="${cls}-desciption">${des}</div>' +
       '<div class="${cls}-link">' +
-      '<a href="${href}">${link}</a>' +
+      '<a target="${target}" href="${href}">${link}</a>' +
       '</div>' +
       '</div>' +
       '<div class="${cls}-more" style="display: none;">${more}</div>' +
@@ -224,6 +225,7 @@
       cls: this.data.cls,
       href: this.data.content.href,
       link: this.data.content.link,
+      target: this.data.content.target,
       more: this.data.content.more,
       btn: this.data.content.button,
       des: this.data.content.description
